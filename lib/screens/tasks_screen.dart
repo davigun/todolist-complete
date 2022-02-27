@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:todolist/widgets/tasks_list.dart';
 
+import 'add_tasks_screen.dart';
+
 class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class TasksScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () {
-          // slide bottom sheet
+          showModalBottomSheet(context: context, builder: (context) => AddTaskScreen());
         },
         child: Icon(Icons.add),
       ),
